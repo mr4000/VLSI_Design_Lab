@@ -1,0 +1,259 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x74C99418CD648EC2",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../Assignment_1.gen/sources_1/bd/design_2",
+      "name": "design_2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "blk_mem_gen_0": "",
+      "adder_subtractor_bk_0": "",
+      "controller_0": ""
+    },
+    "ports": {
+      "add_sub_0": {
+        "direction": "I"
+      },
+      "start_stop_0": {
+        "direction": "I"
+      },
+      "clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_2_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "cout_0": {
+        "direction": "O"
+      },
+      "sum_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      }
+    },
+    "components": {
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "design_2_blk_mem_gen_0_0",
+        "xci_path": "ip\\design_2_blk_mem_gen_0_0\\design_2_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "blk_mem_gen_0",
+        "parameters": {
+          "Coe_File": {
+            "value": "Bram.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Read_Width_A": {
+            "value": "64"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "16"
+          },
+          "Write_Width_A": {
+            "value": "64"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "adder_subtractor_bk_0": {
+        "vlnv": "xilinx.com:module_ref:adder_subtractor_bk:1.0",
+        "xci_name": "design_2_adder_subtractor_bk_0_0",
+        "xci_path": "ip\\design_2_adder_subtractor_bk_0_0\\design_2_adder_subtractor_bk_0_0.xci",
+        "inst_hier_path": "adder_subtractor_bk_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "adder_subtractor_bk",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sum": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "cout": {
+            "direction": "O"
+          },
+          "A": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "B": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "cin": {
+            "direction": "I"
+          }
+        }
+      },
+      "controller_0": {
+        "vlnv": "xilinx.com:module_ref:controller:1.0",
+        "xci_name": "design_2_controller_0_0",
+        "xci_path": "ip\\design_2_controller_0_0\\design_2_controller_0_0.xci",
+        "inst_hier_path": "controller_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_2_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "start_stop": {
+            "direction": "I"
+          },
+          "add_sub": {
+            "direction": "I"
+          },
+          "douta": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          },
+          "A": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "B": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "addra": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "cin": {
+            "direction": "O"
+          },
+          "ena": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "controller_0_addra": {
+        "ports": [
+          "controller_0/addra",
+          "blk_mem_gen_0/addra"
+        ]
+      },
+      "controller_0_ena": {
+        "ports": [
+          "controller_0/ena",
+          "blk_mem_gen_0/ena"
+        ]
+      },
+      "blk_mem_gen_0_douta": {
+        "ports": [
+          "blk_mem_gen_0/douta",
+          "controller_0/douta"
+        ]
+      },
+      "controller_0_A": {
+        "ports": [
+          "controller_0/A",
+          "adder_subtractor_bk_0/A"
+        ]
+      },
+      "controller_0_B": {
+        "ports": [
+          "controller_0/B",
+          "adder_subtractor_bk_0/B"
+        ]
+      },
+      "controller_0_cin": {
+        "ports": [
+          "controller_0/cin",
+          "adder_subtractor_bk_0/cin"
+        ]
+      },
+      "add_sub_0_1": {
+        "ports": [
+          "add_sub_0",
+          "controller_0/add_sub"
+        ]
+      },
+      "start_stop_0_1": {
+        "ports": [
+          "start_stop_0",
+          "controller_0/start_stop"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "blk_mem_gen_0/clka",
+          "controller_0/clk"
+        ]
+      },
+      "adder_subtractor_bk_0_cout": {
+        "ports": [
+          "adder_subtractor_bk_0/cout",
+          "cout_0"
+        ]
+      },
+      "adder_subtractor_bk_0_sum": {
+        "ports": [
+          "adder_subtractor_bk_0/sum",
+          "sum_0"
+        ]
+      }
+    }
+  }
+}
