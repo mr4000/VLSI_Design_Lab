@@ -1,0 +1,31 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.25",
+   "Default View_TopLeft":"-174,10",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port add_sub_0 -pg 1 -lvl 0 -x -40 -y 140 -defaultsOSRD
+preplace port start_stop_0 -pg 1 -lvl 0 -x -40 -y 110 -defaultsOSRD
+preplace port clk_0 -pg 1 -lvl 0 -x -40 -y 80 -defaultsOSRD
+preplace port cout_0 -pg 1 -lvl 3 -x 560 -y 110 -defaultsOSRD
+preplace portBus sum_0 -pg 1 -lvl 3 -x 560 -y 80 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -x 420 -y 270 -defaultsOSRD
+preplace inst adder_subtractor_bk_0 -pg 1 -lvl 2 -x 420 -y 90 -defaultsOSRD
+preplace inst controller_0 -pg 1 -lvl 1 -x 140 -y 110 -defaultsOSRD
+preplace netloc controller_0_addra 1 1 1 270 110n
+preplace netloc controller_0_ena 1 1 1 260 150n
+preplace netloc blk_mem_gen_0_douta 1 0 2 10 290 NJ
+preplace netloc controller_0_A 1 1 1 N 70
+preplace netloc controller_0_B 1 1 1 N 90
+preplace netloc controller_0_cin 1 1 1 280 110n
+preplace netloc add_sub_0_1 1 0 1 0J 120n
+preplace netloc start_stop_0_1 1 0 1 -20J 100n
+preplace netloc clk_0_1 1 0 2 -10 270 N
+preplace netloc adder_subtractor_bk_0_cout 1 2 1 530J 100n
+preplace netloc adder_subtractor_bk_0_sum 1 2 1 NJ 80
+levelinfo -pg 1 -40 140 420 560
+pagesize -pg 1 -db -bbox -sgen -170 0 690 390
+"
+}
+0
