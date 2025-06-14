@@ -1,26 +1,72 @@
-Overview
-This repository contains my submissions for EE 705: VLSI Design Lab 2025 assignments (1-4) including Verilog codes, reports, Vivado project folders, and assignment PDFs.
+# 🧠 EE705: VLSI Design Lab 2025 – Assignment Submissions
 
-Repository Structure
+> This repository contains my submissions for **EE705: VLSI Design Lab (Spring 2025)** at IIT Bombay. It includes Verilog designs, Vivado projects, reports, and final documentation for Assignments 1–4.
+
+---
+
+## 📁 Repository Structure
+
 VLSI-Design-Lab/
 ├── Assign-1/
-│   ├── Codes/               # Verilog source files for Brent-Kung adder and controller
-│   ├── Report.pdf           # Assignment report with results and analysis
-│   ├── Vivado_Project/      # Xilinx project files
-│   └── Assignment-1.pdf     # Original assignment PDF
-│
 ├── Assign-2/
-│   ├── Codes/               # Verilog files for Dadda multiplier & barrel shifter
-│   ├── Report.pdf           # Results and utilization reports
-│   ├── Vivado_Project/      # Project files
-│   └── Assignment-2.pdf     # Assignment PDF
-│
 ├── Assign-3/
-│   ├── Codes/               # AXI-BRAM interface and multiplier integration
-│   ├── Report.pdf           # State diagrams and testbench results
-│   ├── Vivado_Project/      # Project files
-│   └── Assignment-3.pdf     # Assignment PDF
-│
-└── Assignment-4/
-    ├── Report.pdf           # OpenRAM/OpenLane results and screenshots
-    └── Assignment-4.pdf     # Assignment PDF
+└── Assign-4/
+
+
+---
+
+## 📌 Assignments Overview
+
+### 🔧 Assignment 1: 32-bit Brent-Kung Adder
+- ✅ **Components**:
+  - Structural Brent-Kung adder vs behavioral `+` operator
+  - BRAM controller with VIO and ILA-based debugging
+- 📦 **Deliverables**:
+  - Synthesized bitstream for PYNQ
+  - Post-implementation utilization report
+
+### ⚙️ Assignment 2: Dadda Multiplier & Barrel Shifter
+- ✅ **Designs**:
+  - 16-bit multiplier (HA/FA-based)
+  - 8-bit logarithmic (barrel) shifter – structural Verilog
+- 🔬 **Validation**:
+  - RTL vs behavioral (`*`, `<<`) results
+  - BRAM-based testbench environment
+
+### 🧩 Assignment 3: AXI-BRAM Integration
+- 🔄 **Workflow**:
+  - AXI4-Lite BRAM controller
+  - COE-based BRAM initialization
+  - Integration with Dadda multiplier
+- 🛠️ **Debugging**:
+  - ILA probes for AXI transactions
+
+### 🧱 Assignment 4: OpenRAM to GDSII Layout
+- 🧬 **Steps**:
+  - Generated ICACHE/DCACHE macros using OpenRAM
+  - Hierarchical macro placement using OpenLane
+  - DRC/LVS clean layout generation
+- 📤 **Outputs**:
+  - `.gds` Magic-compatible layouts
+  - Setup/Hold STA reports
+
+📂 Directory Descriptions
+Each assignment directory contains:
+
+Codes/ – Verilog design and testbench files
+
+Report.pdf – Lab report with methodology, simulation waveforms, and results
+
+Vivado_Project/ – Full Xilinx Vivado project for synthesis & implementation
+
+Assignment-X.pdf – Original assignment brief
+
+📎 License
+This repository is meant for academic use under the MIT License.
+
+👨‍💻 Author
+Manish Ranjan
+M.Tech ICS, IIT Bombay
+Email: manishranjan4000@gmail.com
+GitHub: @mr4000
+
